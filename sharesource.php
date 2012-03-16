@@ -5,5 +5,6 @@ if($_SERVER['QUERY_STRING'] === 'source'){
 		return empty($match[1]) ? '' : "/*{$match[1]}*/";
 	}, $file);
 	highlight_string($file);
+	die;
 }
 ?>
