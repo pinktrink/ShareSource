@@ -4,6 +4,6 @@ if($_SERVER['QUERY_STRING'] === 'source'){
 	preg_replace_callback('@/\*HIDE(?:=(.+?))?\*/.*?/\*HIDE\*/@g', function($match){
 		return empty($match[1]) ? '' : "/*{$match[1]}*/";
 	}, $file);
-	highlight_string($file);
+	highlight_string(htmlspecialchars($file));
 }
 ?>
