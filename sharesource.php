@@ -31,7 +31,7 @@ if($_SERVER['QUERY_STRING'] === 'source'){
 	$file = file_get_contents($_SERVER['SCRIPT_FILENAME']);
 	if($_SERVER['SCRIPT_FILENAME'] !== __FILE__){
 		$file = preg_replace_callback('@/\*HIDE(?:=(.+?))?\*/.*?/\*HIDE\*/@', function($match){
-			return empty($match[1]) ? '' : ($match[1][0] === '!' ? substr($match, 1) : "/*{$match[1]}*/");
+			return empty($match[1]) ? '' : ($match[1][0] === '!' ? substr($match[1], 1) : "/*{$match[1]}*/");
 		}, $file);
 	}
 	highlight_string($file);
