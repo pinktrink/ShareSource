@@ -14,7 +14,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-// Basically what SharSource does is it allows anyone to view the PHP source code of a file.
+// Basically what ShareSource does is it allows anyone to view the PHP source code of a file.
 // Now obviously there are security risks that go along with this.
 // To mitigate that, there are a few options:
 //
